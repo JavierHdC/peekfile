@@ -12,9 +12,8 @@ ID=$(mktemp)
 for i in $(find $1 -type f -name "*.fa" -or -name "*.fasta"); do grep ">" $i >> $ID
 #Count all the unique ID´s stored in the variable.
 total_ID=$(sort $ID | uniq | wc -l)
-file_name=$(basename $i)
-done
 echo "Total unique fasta/fa ID´s: $total_ID"
+done
 #Start the report.
 for i in $(find $1 -type f -name "*.fa" -or -name "*.fasta");
 do file_name=$(basename $i) 
