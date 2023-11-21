@@ -13,8 +13,7 @@ lines=${2:-0}
 if [[ -d $dir && $lines =~ ^[0-9]+$ ]]
 	then
 	echo "===============================================================" 
-	echo "Generating a report for the .fasta and .fa files in directory $dir, displaying the full content of 
-files with less than $((2*$lines)) lines, or showing the $lines first and last lines of the larger files..."
+	echo "Generating a report for the .fasta and .fa files in directory $dir, displaying the full content of files with less than $((2*$lines)) lines, or showing the $lines first and last lines of the larger files..."
 	echo "==============================================================="
 
 	#Create a command to find .fasta/.fa files in our current directory and its subfolders.
